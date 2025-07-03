@@ -1,0 +1,115 @@
+* {
+      box-sizing: border-box;
+    }
+    body {
+      background: #121212;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 1rem;
+    }
+    #quiz-container {
+      background: #1e1e1e;
+      border-radius: 12px;
+      max-width: 480px;
+      width: 100%;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(29,185,84,0.7);
+      user-select: none;
+    }
+    h2 {
+      margin-bottom: 1rem;
+      color: #1db954;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
+    #question {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      min-height: 60px;
+    }
+    .answers {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    button.answer-btn {
+      background: #2d2d2d;
+      border: 2px solid transparent;
+      color: #f5f5f5;
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-align: left;
+    }
+    button.answer-btn:hover:not(.disabled) {
+      background: #1db954;
+      color: #121212;
+      border-color: #1db954;
+      box-shadow: 0 0 8px #1db954;
+    }
+    button.answer-btn.correct {
+      background: #1ed760;
+      color: #121212;
+      border-color: #1ed760;
+      box-shadow: 0 0 10px #1ed760;
+      cursor: default;
+    }
+    button.answer-btn.incorrect {
+      background: #ff6b6b;
+      color: #121212;
+      border-color: #ff6b6b;
+      box-shadow: 0 0 10px #ff6b6b;
+      cursor: default;
+    }
+    button.answer-btn.disabled {
+      cursor: default;
+      pointer-events: none;
+      opacity: 0.7;
+    }
+    #next-btn {
+      margin-top: 2rem;
+      background: #1db954;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      color: #121212;
+      cursor: pointer;
+      box-shadow: 0 0 15px #1db954;
+      transition: background 0.3s ease;
+      display: none;
+    }
+    #next-btn:hover {
+      background: #14833b;
+    }
+     #result {
+      text-align: center;
+      font-size: 1.3rem;
+      margin-top: 1rem;
+      font-weight: 700;
+      color: #1db954;
+    }
+    #restart-btn {
+      margin-top: 1.5rem;
+      background: #1db954;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-weight: 700;
+      border-radius: 30px;
+      color: #121212;
+      cursor: pointer;
+      box-shadow: 0 0 15px #1db954;
+      transition: background 0.3s ease;
+      display: none;
+    }
+    #restart-btn:hover {
+      background: #14833b;
+    }
